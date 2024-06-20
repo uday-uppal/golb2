@@ -5,8 +5,7 @@ from django.views.generic import ListView
 # Create your views here.
 def home(request):
     x=BlogModel.objects.all()
-    
-    context={"blogs":x}
+    context={"blogs":x[:50]}
     # blogs[]
     return render(request,"index.html",context)
 def blog_detail(request,slug):
@@ -35,8 +34,8 @@ class SearchView(ListView):
        result = super(SearchView, self).get_queryset()
        query = self.request.GET.get('search')
        if query:
-          postresult = BlogModel.objects.filter(title__contains=query)
-          result = postresult
+          postresult = BlogModel.objects.filter(content__contains=query)
+          result = postresult[:50]
        else:
            result = None
        return result

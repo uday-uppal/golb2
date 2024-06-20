@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="{% static "blog/css/contact.css"%}">
     <link rel="icon" type="image/x-icon" href="{% static "blog/img/favicon.ico"%}">
 
-    <title>LEGION of Birds</title>
+    <title>Fellow Penguin</title>
 </head>
 
 <body>
-    <nav class="navigation max-width-1 m-auto">
-
-        <div class="left"><a href="/"><div class="logo23"><img src="{% static 'blog/img/logo.png' %}" height="100px" width="100px" alt=""><span id="logo">LEGION of Birds</Span></a></div>
-            <ul class="menu">
+    <nav class="navigation px-2">
+<div class="navbar">
+        <div class="left px-7"><a href="/"><div class="logo23"><img src="{% static 'blog/img/logo.png' %}" height="100px" width="100px" alt=""></div><div style="margin: 15px 200px;"><img src="{% static 'blog/img/title.png' %}" height="100px" width="450px" alt=""></a></div>
+            <!-- <ul class="menu">
                 <a href="/" class="home">
                     <li class="home">Home</li>
                 </a>
@@ -34,27 +34,26 @@
                 <a href="{% url 'contact_url' %}" class="contact">
                     <li class="contact">Contact</li>
                 </a>
-            </ul>
+            </ul> -->
         </div>
         <div class="right">
-            <form class ="add_your_class" method="GET" action=""><input class="form_control add_your_class" type="search" placeholder="Article Search" name="search">
+            <form class ="add_your_class" method="GET" action=""><input class="form_control add_your_class" type="search" placeholder="Search" name="search">
             <button class="btn add_your_class" formaction	="{% url 'search' %}" >Search</button>
-        </form>
-
+           </form>
         </div>
-
-    </nav>
+    </div>
+</nav>
 {% block start %}{% endblock start %} 
     <div class="footer">
         <p>©Copywrite Protected </p>
-        <div class="social">
+        <!-- <div class="social">
            <a href=""><img src="{% static 'blog/img/youtube.png' %}" alt="Youtube"></a>
            <a href=""><img src="{% static 'blog/img/face.png'%}" alt="Facebook"></a>
            <a href=""><img src="{% static 'blog/img/insta.png'%}" alt="Instagram"></a>
            <a href=""><img src="{% static 'blog/img/twi.png'%}" alt="Twitter"></a>
            <a href=""><img src="{% static 'blog/img/lin.png'%}" alt="Linkedin"></a>
            <a href=""><img src="{% static 'blog/img/pin.png'%}" alt="Pininterest"></a>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>
