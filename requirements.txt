@@ -1,4 +1,4 @@
 django
 pillow
 django-froala-editor
-WhiteNoise
+whitenoise
