@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'legion.urls'
-
+CSRF_TRUSTED_ORIGINS = ['https://*.fellowpenguin.azurewebsites.net','https://*.127.0.0.1']
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
