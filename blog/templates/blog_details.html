@@ -7,7 +7,7 @@
 <div class="bb m-auto max-width-3">
     <div class=" m-auto max-width-3 "><h1 class="heading" style="font-size: 50px;">{{blog_obj.title}} </h1></div>
     <div class="det m-auto max-width-3 "><p>Author: {{blog_obj.author}}</p><p>&nbsp &nbsp &nbsp</p><p> Read Time: {{blog_obj.read_time}} min</p></div>
-    <div class="main_img m-auto max-width-3"><img src="blog/{{blog_obj.image}}" alt=""></div>
+    <div><img class="main_img m-auto max-width-3" src="{% static blog_obj.image  %}" alt=""></div>
     <br><hr class="m-auto max-width-3"><br>
     <div class="cont  m-auto max-width-3"><p>{{blog_obj.content|safe}} </p></div></div>
 
