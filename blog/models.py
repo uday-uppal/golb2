@@ -1,6 +1,5 @@
 from distutils.command.upload import upload
 from django.db import models
-from froala_editor.fields import FroalaField
 # Create your models here.
 from django.contrib.auth.models import User
 from .hh import generate_slug
@@ -21,6 +20,6 @@ class BlogModel(models.Model):
 class contact_model(models.Model):
     email=models.EmailField()       
     subject=models.CharField(max_length=1000)
-    message=FroalaField()
+    message=models.CharField(max_length=1000)
     def __str__(self):
         return self.email 
