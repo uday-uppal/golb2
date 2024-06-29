@@ -6,12 +6,12 @@ from django.contrib.auth.models import User
 from .hh import generate_slug
 class BlogModel(models.Model):
     title=models.CharField(max_length=1000)
-    content=FroalaField()
+    content=models.CharField(max_length=10000000)
     slug=models.SlugField(max_length=1000, null=True, blank=True)
     image=models.ImageField(upload_to="blog")
     created_at=models.DateTimeField(auto_now_add=True)
     upload_to=models.DateTimeField(auto_now=True)
-    author=models.CharField(max_length=1000,default="Uday Uppal")
+    author=models.CharField(max_length=1000,default="Purple Penguin")
     read_time=models.IntegerField(default=5)
     def __str__(self):
         return self.title
