@@ -8,6 +8,7 @@ from django.urls import reverse
 class BlogModel(models.Model):
     title=models.CharField(max_length=1000)
     content=models.CharField(max_length=10000000)
+    tag=models.CharField(max_length=1000, default='miscellaneous')
     slug=models.SlugField(max_length=1000, null=True, blank=True)
     image=models.ImageField(upload_to="blog")
     created_at=models.DateTimeField(auto_now_add=True)
