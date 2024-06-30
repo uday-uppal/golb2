@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "blog"]
+    "blog",
+    "django.contrib.sitemaps",
+    "django.contrib.sites"
+    ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,7 +57,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'legion.urls'
-CSRF_TRUSTED_ORIGINS = ['https://*.fellowpenguin.azurewebsites.net','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*.fellowpenguin.azurewebsites.net','https://*.127.0.0.1','https://*.fellowpenguin.com']
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

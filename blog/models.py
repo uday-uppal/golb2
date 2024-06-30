@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 from django.contrib.auth.models import User
 from .hh import generate_slug
+from django.urls import reverse
+
 class BlogModel(models.Model):
     title=models.CharField(max_length=1000)
     content=models.CharField(max_length=10000000)
@@ -17,6 +19,8 @@ class BlogModel(models.Model):
     def save(self, *args,**kwargs):
         self.slug=generate_slug(self.title)
         super(BlogModel,self).save(*args,**kwargs)
+    def get_absolute_url(self): 
+        return reverse('blog_detail',kwargs={'slug': self.slug})    
 class contact_model(models.Model):
     email=models.EmailField()       
     subject=models.CharField(max_length=1000)
