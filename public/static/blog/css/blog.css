@@ -1,18 +1,15 @@
-.fr-fic{
-    max-width:100%;
-}
 .max-width-3{
-    max-width: 60vw;
+    max-width: 70vw;
 }
 .heading{
-    padding: 20px;
+    /* padding: 20px; */
     font-size: 30px;
 }
 .bb{
     display:flex;
     /* justify-content: center; */
 flex-direction:column;
-padding: 20px 0px 40px 0px;
+/* padding: 20px 0px 40px 0px; */
 }
 .cont{
 
@@ -23,11 +20,11 @@ padding: 20px 0px 40px 0px;
 .main_img img{
     /* height: 40vw; */
     /* height: auto;
-    width:auto; */
-    
+    width:auto; */  
+    width: 70vw;
+  
 }
 .main_img{
-padding: 0.774vw 9.679vw;
 }
 .det{
     font-size: 20px;
@@ -40,10 +37,4 @@ padding: 0.774vw 9.679vw;
     margin: 1vw;
 
 }
-/* .det{
-    display: flex;
-    justify-content: center;
-} */
-.fr-fic{
-    max-width:100%;
-}
+
