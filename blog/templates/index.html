@@ -28,8 +28,8 @@
     <div class="cardsss max-width-1 m-auto">
         {% for blog in blogs %}
       <a class="anchor_card" href="{%url "blog_detail" blog.slug%}">
-        <div class="card cc123" style="width: 18rem;">
-          <img class="card-img-top anchor_img" src="{% static blog.image %}" alt="Card image cap">
+        <div class="card cc123">
+          <img class="card-img-top anchor_img" style="width: 18rem; height: 12rem;" src="{% static blog.image %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{blog.title}}</h5>
             
